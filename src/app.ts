@@ -12,3 +12,4 @@ const persons:{id:number,name:string,age:number}[]=[
     {id:2,name:"dai",age:25},
 
 ]
+
