@@ -28,25 +28,7 @@ function App() {
   }
   return (
     <div className="App">
-      <table>
-        <thead>
-          <th>#</th>
-          <th>Name</th>
-          <th></th>
-        </thead>
-        <tbody>
-          {products.map((item, index) => {
-            return <tr>
-                    <td>{index + 1}</td>
-                    <td>{item.name}</td>
-                    <td>
-                      <button onClick={() => removeItem(item.id)}>Remove</button>
-                    </td>
-                  </tr>
-          })}
-          
-        </tbody>
-      </table>
+      
       <header>
         <ul>
           <li><NavLink to="/">Home page</NavLink></li>
@@ -69,7 +51,7 @@ function App() {
           <Route path='admin' element={<AdminLayout/>}>
             <Route index element={< Navigate to="dashboard"/>}/>
             <Route path='dashboard' element={< Dashboard/>}/>
-            <Route path='product' element={< ManagerProduct/>}/>
+            <Route path='product' element={< ManagerProduct data={products}/>}/>
           </Route>
 
         </Routes>
