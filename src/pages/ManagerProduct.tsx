@@ -1,6 +1,7 @@
 import React from 'react'
 import { ProductType } from '../types/product'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { NavLink } from 'react-router-dom';
 type ManagerProductProps = {
     data: ProductType[]
 }
@@ -22,7 +23,10 @@ const ManagerProduct = (props: ManagerProductProps) => {
                         <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{item.name}</td>
-                            <td><button type="button" className="btn btn-primary">Delete</button></td>
+                            <td>
+                                <NavLink to="" className="btn btn-primary">Sửa</NavLink>
+                                <button type="button" className="btn btn-primary">Xóa</button>
+                            </td>
                         </tr>
                     )
                 })}
