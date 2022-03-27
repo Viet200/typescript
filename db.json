@@ -28,5 +28,21 @@
       "price": "1234567",
       "id": "GHBlSNe"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "viet",
+      "email": "viet@gmail.com",
+      "password": "123456",
+      "phone": 12345678
+    },
+    {
+      "email": "nguyenvanviet28072001@gmail.com",
+      "name": "wordpress",
+      "password": "213425",
+      "phone": "124352465",
+      "id": 2
+    }
   ]
 }

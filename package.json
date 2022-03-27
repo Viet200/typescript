@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "admin-lte": "3.2",
     "axios": "^0.26.1",
     "axioss": "^0.0.1-security",
     "bootstrap": "^5.1.3",
