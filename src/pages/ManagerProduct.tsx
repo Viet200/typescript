@@ -3,7 +3,9 @@ import { ProductType } from '../types/product'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from 'react-router-dom';
 type ManagerProductProps = {
-    data: ProductType[]
+    data: ProductType[],
+    products: ProductType[],
+    onRemove: (id: number) => void
 }
 
 const ManagerProduct = (props: ManagerProductProps) => {
@@ -24,8 +26,8 @@ const ManagerProduct = (props: ManagerProductProps) => {
                             <td>{index + 1}</td>
                             <td>{item.name}</td>
                             <td>
-                                <NavLink to="" className="btn btn-primary">Sửa</NavLink>
-                                <button type="button" className="btn btn-primary">Xóa</button>
+                                <NavLink to={`/admin/product/${item.id}/edit`}  className="btn btn-primary">Sửa</NavLink>
+                                <button type="button" onClick={() => props.onRemove(product.id)} className="btn btn-primary">Xóa</button>
                             </td>
                         </tr>
                     )
