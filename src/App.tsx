@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import type { ProductType } from './types/product';
 import axios from 'axios';
 import { add, list, remove, update } from './api/product';
@@ -15,7 +14,6 @@ import ManagerProduct from './pages/ManagerProduct';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import { UserType } from './types/users';
-import { Add } from './api/users';
 function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
 
