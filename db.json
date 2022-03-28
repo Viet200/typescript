@@ -43,6 +43,27 @@
       "password": "213425",
       "phone": "124352465",
       "id": 2
+    },
+    {
+      "email": "vietnvph13644@fpt.edu.vn",
+      "name": "Sản phẩm 1",
+      "password": "12345678",
+      "phone": "213456789",
+      "id": 3
+    },
+    {
+      "email": "vietnvph13644@fpt.edu.vn",
+      "name": "Sản phẩm 1",
+      "password": "12345678",
+      "phone": "213456789",
+      "id": 4
+    },
+    {
+      "email": "tunguyentuan479@gmail.com",
+      "name": "Việt",
+      "password": "124356",
+      "phone": "2134536",
+      "id": 5
     }
   ]
 }
