@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
 
-      <header>
+      {/* <header>
         <ul>
           <li><NavLink to="/">Home page</NavLink></li>
           <li><NavLink to="/product">Product page</NavLink></li>
@@ -56,7 +56,7 @@ function App() {
 
 
         </ul>
-      </header>
+      </header> */}
       <main>
         <Routes>
           {/* <Route path="/" element={<h2>Home Page</h2>}></Route>

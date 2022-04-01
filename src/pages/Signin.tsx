@@ -3,7 +3,7 @@ import { UserType } from "../types/users";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { Signin } from "../api/users";
-import { authenticate } from "./utils/localStorage";
+import { authenticate } from "../utils/localStorage";
 
 
 type Props = {};
