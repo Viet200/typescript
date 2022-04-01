@@ -1,7 +1,7 @@
 import { UserType } from "../types/users";
 import instance from "./instance";
 
-export const Signup = (signup: UserType) => {
+export const Add = (signup: UserType) => {
   const url = `/users`;
   return instance.post(url, signup);
 };

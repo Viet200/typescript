@@ -2,7 +2,7 @@
   "products": [
     {
       "createdAt": "2022-03-02T00:08:27.411Z",
-      "name": "Handcrafted Wooden Gloves",
+      "name": "update",
       "img": "http://placeimg.com/640/480/sports",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "price": "406.00",
@@ -64,6 +64,21 @@
       "password": "124356",
       "phone": "2134536",
       "id": 5
+    },
+    {
+      "email": "nguyenvanviet28072001@gmail.com",
+      "password": "124343",
+      "id": 6
+    },
+    {
+      "email": "0326582102",
+      "password": "2132",
+      "id": 7
+    },
+    {
+      "email": "viet@gmail.com",
+      "password": "123456",
+      "id": 8
     }
   ]
 }

@@ -1,36 +1,39 @@
-import React from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import React from "react";
+import { UserType } from "../types/users";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import { Signin } from "../api/users";
+import { authenticate } from "./utils/localStorage";
 
-type SigninProps = {}
-type FormInputs = {
-  email: String,
-  password: String
-}
 
-const Signin = (props: SigninProps) => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<FormInputs>();
-  const onSubmit:SubmitHandler<FormInputs> = (data) =>{
-    console.log(data);
-    
+type Props = {};
+type FormInput = {
+  email: String;
+  password: String;
+};
+const Singin = (props: Props) => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<FormInput>();
+  const navigate = useNavigate();
+  const onSubmit: SubmitHandler<FormInput> = async (data) => {
+
+    const {data: user } = await Signin(data);
+    authenticate(user, () => navigate('/'))
   };
-  return (
-    <div><form onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-        <input type="email" className="form-control" id="exampleInputEmail1" {...register("email")} />
-        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className="form-label" {...register("password")}>Password</label>
-        <input type="password" className="form-control" id="exampleInputPassword1" />
-      </div>
-      <div className="mb-3 form-check">
-        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-        <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" className="btn btn-primary">Submit</button>
-    </form></div>
-  )
-}
 
-export default Signin
+  return (
+    <div>
+      <form action="" onSubmit={handleSubmit(onSubmit)}>
+        <input type="text" placeholder="email" {...register("email")} />
+        <input type="password" placeholder="password"{...register("password")} />
+        <button>Sign in</button>
+      </form>
+    </div>
+  );
+};
+
+export default Singin;

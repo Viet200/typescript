@@ -14,6 +14,7 @@ import ManagerProduct from './pages/ManagerProduct';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import { UserType } from './types/users';
+import { Add } from "./api/users";
 function App() {
   const [products, setProducts] = useState<ProductType[]>([]);
 
@@ -38,9 +39,11 @@ function App() {
     setProducts(products.map((item) => (item.id == data.id ? data : item)));
 
     }
-    const onHandleSignup = async (signup:UserType)=>{
-      const {data}= await Add(signup);
-    }
+    const onHandleSignup = async (signup: UserType) => {
+      const { data } = await Add(signup);
+  
+      console.log(signup);
+    };
   return (
     <div className="App">
 
